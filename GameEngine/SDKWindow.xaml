@@ -1,0 +1,55 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameEngine"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="GameEngine.MainWindow"
+        mc:Ignorable="d"
+        Title="SDK" Height="1088.4" Width="1713.2" WindowState="Maximized">
+    <Grid Background="#FF4C4B57">
+        <Button x:Name="CreateButton" Content="Create Entity" HorizontalAlignment="Left" Margin="11,371,0,0" VerticalAlignment="Top" Width="182" Click="CreateButton_Click" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <ComboBox x:Name="TypeBox" HorizontalAlignment="Left" Margin="77,83,0,0" VerticalAlignment="Top" Width="157" SelectedIndex="0" Background="#FF686883" Foreground="Black" BorderBrush="#FF3F3F3F">
+            <System:String>Type 0</System:String>
+            <System:String>Type 1</System:String>
+            <System:String>Type 2</System:String>
+            <System:String>Type 3</System:String>
+        </ComboBox>
+        <TextBox x:Name="TexturePath" HorizontalAlignment="Left" Height="23" Margin="78,57,0,0" TextWrapping="Wrap" Text="C:\" VerticalAlignment="Top" Width="157" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="23" Margin="78,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <CheckBox x:Name="BoolCheckButton" Content="Yes/No" HorizontalAlignment="Left" Margin="198,374,0,0" VerticalAlignment="Top" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <ListBox x:Name="EntitiesBox" HorizontalAlignment="Left" Height="495" Margin="1462,506,0,0" VerticalAlignment="Top" Width="227" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <Button x:Name="LoadButton" Content="Load" HorizontalAlignment="Left" Margin="1464,1011,0,0" VerticalAlignment="Top" Width="110" Click="LoadButton_Click" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <Button x:Name="SceneLoadButton" Content="Load" HorizontalAlignment="Left" Margin="10,529,0,0" VerticalAlignment="Top" Width="195" Click="SceneLoadButton_Click" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <Button x:Name="SerializeButton" Content="Save" HorizontalAlignment="Left" Margin="209,528,0,0" VerticalAlignment="Top" Width="195" Click="SerializeButton_Click" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <TextBox x:Name="ScenePath" HorizontalAlignment="Left" Height="23" Margin="209,500,0,0" TextWrapping="Wrap" Text="C:\scene.xts" VerticalAlignment="Top" Width="195" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <Button x:Name="DeleteEntityButton" Content="Delete" HorizontalAlignment="Left" Margin="1579,1011,0,0" VerticalAlignment="Top" Width="110" Click="DeleteEntityButton_Click" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <TextBox x:Name="XPosBox" HorizontalAlignment="Left" Height="23" Margin="53,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <TextBox x:Name="YPosBox" HorizontalAlignment="Left" Height="23" Margin="53,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <Label Content="Entity Name:" HorizontalAlignment="Left" Margin="0,27,0,0" VerticalAlignment="Top"/>
+        <Label Content="Texture Path:" HorizontalAlignment="Left" Margin="0,53,0,0" VerticalAlignment="Top"/>
+        <Label Content="Entity Type:" HorizontalAlignment="Left" Margin="0,81,0,0" VerticalAlignment="Top"/>
+        <Label Content="X:" HorizontalAlignment="Left" Margin="6,137,0,0" VerticalAlignment="Top"/>
+        <Label Content="Y:" HorizontalAlignment="Left" Margin="6,165,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.5,2.266"/>
+        <TextBox x:Name="XScaleBox" HorizontalAlignment="Left" Height="23" Margin="53,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <TextBox x:Name="YScaleBox" HorizontalAlignment="Left" Height="23" Margin="53,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <Label Content="Scale X:&#xD;&#xA;" HorizontalAlignment="Left" Margin="0,193,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Scale Y:" HorizontalAlignment="Left" Margin="0,221,0,0" VerticalAlignment="Top" Height="28"/>
+        <ListBox x:Name="BehaviorsListBox" HorizontalAlignment="Left" Height="84" Margin="11,254,0,0" VerticalAlignment="Top" Width="224" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <TextBox x:Name="BehaviorNameBox" HorizontalAlignment="Left" Height="23" Margin="10,343,0,0" TextWrapping="Wrap" Text="Behavior" VerticalAlignment="Top" Width="125" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <Button x:Name="AddBehaviorButton" Content="+" HorizontalAlignment="Left" Margin="140,344,0,0" VerticalAlignment="Top" Width="36" RenderTransformOrigin="1.806,0.482" Click="AddBehaviorButton_Click" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <Button x:Name="RemoveBehaviorButton" Content="-" HorizontalAlignment="Left" Margin="181,344,0,0" VerticalAlignment="Top" Width="36" Click="RemoveBehaviorButton_Click" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <ListBox x:Name="VariablesListBox" HorizontalAlignment="Left" Height="364" Margin="1123,511,0,0" VerticalAlignment="Top" Width="321" Background="#FF686883" BorderBrush="#FF3F3F3F"/>
+        <Label Content="Variables:" HorizontalAlignment="Left" Margin="1123,482,0,0" VerticalAlignment="Top" Width="227"/>
+        <Label Content="Entity Create:" HorizontalAlignment="Left" Margin="0,-2,0,0" VerticalAlignment="Top" Width="228"/>
+        <Label Content="Entity Data:" HorizontalAlignment="Left" Margin="-1,106,0,0" VerticalAlignment="Top" Width="229"/>
+        <Label Content="Entites:" HorizontalAlignment="Left" Margin="1462,480,-88.8,0" VerticalAlignment="Top" Width="334"/>
+        <TextBox x:Name="VariableNameTextBox" HorizontalAlignment="Left" Height="23" Margin="1123,880,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="101"/>
+        <Button x:Name="AddVariableButton" Content="+" HorizontalAlignment="Left" Margin="1307,880,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="AddVariableButton_Click"/>
+        <CheckBox x:Name="VariableIsStringCheckBox" Content="Is String" HorizontalAlignment="Left" Margin="1387,883,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <TextBox x:Name="VariableValueTextBox" HorizontalAlignment="Left" Height="23" Margin="1123,908,0,0" TextWrapping="Wrap" Text="Value" VerticalAlignment="Top" Width="101"/>
+        <ListBox HorizontalAlignment="Left" Height="446" Margin="1462,29,0,0" VerticalAlignment="Top" Width="227"/>
+        <Rectangle x:Name="rect" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="100" Margin="632,191,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" MouseDown="Rectangle_MouseDown"/>
+
+    </Grid>
+</Window>
